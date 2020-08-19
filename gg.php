@@ -132,7 +132,7 @@ class EventHandler extends \danog\MadelineProto\EventHandler
                 }
                 // $client = new Amp\Artax\DefaultClient();
                 // $promise = $client->request($url, [Amp\Artax\Client::OP_MAX_BODY_BYTES => (int) (1.5 * (1024 ** 3))]);
-				$client = $this->getHTTPClient();
+	/* 			$client = $this->getHTTPClient();
                 $response = yield $promise;
                 $headers = $response->getHeaders();
                 if (empty($headers['content-length'][0])) {
@@ -156,6 +156,11 @@ class EventHandler extends \danog\MadelineProto\EventHandler
                 $time = time();
                 $last_progress = 0;
                 $queue_id = $this->randomString().time();
+				 */
+				
+			    // yield $this->messages->sendMessage(['peer' => $update, 'message' => $url, 'reply_to_msg_id' => $message_id]);
+				
+				
                 yield $this->messages->sendMedia([
                     'peer'  => $update,
                     'media' => [
